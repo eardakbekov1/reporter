@@ -1,2 +1,0 @@
-# reporter
-Hakaton IT-Academy
