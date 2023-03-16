@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Prioriti;
+use App\Models\Priority;
 use Illuminate\Http\Request;
 
-class PrioritiController extends Controller
+class PriorityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class PrioritiController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Prioriti  $prioriti
+     * @param  \App\Models\Priority  $priority
      * @return \Illuminate\Http\Response
      */
-    public function show(Prioriti $prioriti)
+    public function show(Priority $priority)
     {
         //
     }
@@ -52,10 +52,10 @@ class PrioritiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Prioriti  $prioriti
+     * @param  \App\Models\Priority  $priority
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prioriti $prioriti)
+    public function edit(Priority $priority)
     {
         //
     }
@@ -64,10 +64,10 @@ class PrioritiController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Prioriti  $prioriti
+     * @param  \App\Models\Priority  $priority
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Prioriti $prioriti)
+    public function update(Request $request, Priority $priority)
     {
         //
     }
@@ -75,10 +75,10 @@ class PrioritiController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Prioriti  $prioriti
+     * @param  \App\Models\Priority  $priority
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Prioriti $prioriti)
+    public function destroy(Priority $priority)
     {
         //
     }
