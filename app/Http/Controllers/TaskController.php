@@ -25,19 +25,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-
-
-// Создаем новую задачу
-        $task = new Task();
-        $task->title = 'Новая задача';
-        $task->description = 'Описание новой задачи';
-
-// Получаем статус "В работе"
-        $status = Status::where('name', 'В работе')->first();
-
-// Устанавливаем статус для задачи
-        $task->status()->associate($status);
-        $task->save();
+        //
     }
 
     /**
