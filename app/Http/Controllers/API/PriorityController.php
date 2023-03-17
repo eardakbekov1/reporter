@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
-use App\Models\Position;
+use App\Http\Controllers\Controller;
+use App\Models\Priority;
 use Illuminate\Http\Request;
 
-class PositionController extends Controller
+class PriorityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class PositionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Priority  $priority
      * @return \Illuminate\Http\Response
      */
-    public function show(Position $position)
+    public function show(Priority $priority)
     {
         //
     }
@@ -52,10 +53,10 @@ class PositionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Priority  $priority
      * @return \Illuminate\Http\Response
      */
-    public function edit(Position $position)
+    public function edit(Priority $priority)
     {
         //
     }
@@ -64,10 +65,10 @@ class PositionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Priority  $priority
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Position $position)
+    public function update(Request $request, Priority $priority)
     {
         //
     }
@@ -75,10 +76,10 @@ class PositionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Position  $position
+     * @param  \App\Models\Priority  $priority
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Position $position)
+    public function destroy(Priority $priority)
     {
         //
     }
