@@ -1,9 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Validator;
+use PHPUnit\Exception;
 
 class TaskController extends Controller
 {
@@ -14,7 +18,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(['tasks' => Task::all()]);
     }
 
     /**
@@ -31,11 +35,33 @@ class TaskController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(Request $request)
     {
-        //
+        $validation = Validator::make($request->all(), [
+            'title' => 'required|string:200',
+            'description' => 'required|string',
+            'deadline' => 'required|string',
+            'status_id' => 'required|numeric',
+            'user_id' => 'required|numeric',
+            'priority_id' => 'required|numeric',
+            'actual_completion_date' => 'required|string',
+            'plan_start_date' => 'required|string'
+        ]);
+
+        if ($validation->fails()){
+            return response()->json(['status' => 'error', 'message' => $validation->getMessageBag(), 400]);
+        }
+        else{
+            try {
+                Task::create($request->all());
+            } catch (Exception $ex){
+                return response()->json(['status' => 'fail', 'msg' => $ex->getMessage()]);
+            }
+
+            return response()->json(['status' => 'success']);
+        }
     }
 
     /**

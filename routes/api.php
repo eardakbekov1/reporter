@@ -24,7 +24,10 @@ Route::post('/login', [\App\Http\Controllers\API\AuthController::class, 'login']
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/myAccount', [\App\Http\Controllers\API\AuthController::class, 'myAccount'])->name('myAccount.api.show');
+    Route::get('tasks', [\App\Http\Controllers\API\TaskController::class, 'index'])->name('tasks.api.index');
+    Route::post('tasks/store', [\App\Http\Controllers\API\TaskController::class, 'store'])->name('tasks.api.store');
+    Route::get('/users', [\App\Http\Controllers\API\UserController::class, 'index'])->name('users.api.index');
+    Route::get('/priority', [\App\Http\Controllers\API\PriorityController::class, 'index'])->name('priority.api.index');
+    Route::get('/status', [\App\Http\Controllers\API\StatusController::class, 'index'])->name('status.api.index');
+
 });
-Route::get('/users', [\App\Http\Controllers\API\UserController::class, 'index'])->name('users.api.index');
-Route::get('/priority', [\App\Http\Controllers\API\PriorityController::class, 'priority'])->name('priority.api.index');
-Route::get('/status', [\App\Http\Controllers\API\StatusController::class, 'status'])->name('status.api.index');

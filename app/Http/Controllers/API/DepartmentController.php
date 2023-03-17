@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Models\Priority;
+use App\Models\Department;
 use Illuminate\Http\Request;
 
-class PriorityController extends Controller
+class DepartmentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class PriorityController extends Controller
      */
     public function index()
     {
-        return response()->json(['priority' => Priority::all()]);
+        //
     }
 
     /**
@@ -42,10 +42,10 @@ class PriorityController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Priority  $priority
+     * @param  \App\Models\Department  $department
      * @return \Illuminate\Http\Response
      */
-    public function show(Priority $priority)
+    public function show(Department $department)
     {
         //
     }
@@ -53,10 +53,10 @@ class PriorityController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Priority  $priority
+     * @param  \App\Models\Department  $department
      * @return \Illuminate\Http\Response
      */
-    public function edit(Priority $priority)
+    public function edit(Department $department)
     {
         //
     }
@@ -65,10 +65,10 @@ class PriorityController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Priority  $priority
+     * @param  \App\Models\Department  $department
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Priority $priority)
+    public function update(Request $request, Department $department)
     {
         //
     }
@@ -76,10 +76,10 @@ class PriorityController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Priority  $priority
+     * @param  \App\Models\Department  $department
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Priority $priority)
+    public function destroy(Department $department)
     {
         //
     }

@@ -23,4 +23,5 @@ class Task extends Model
         return $this->belongsTo(Priority::class);
     }
 
+    protected $guarded = [];
 }
