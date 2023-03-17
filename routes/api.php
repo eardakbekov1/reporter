@@ -25,5 +25,6 @@ Route::post('/login', [\App\Http\Controllers\API\AuthController::class, 'login']
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/myAccount', [\App\Http\Controllers\API\AuthController::class, 'myAccount'])->name('myAccount.api.show');
     Route::get('tasks', [\App\Http\Controllers\API\TaskController::class, 'index'])->name('tasks.api.index');
-});
     Route::post('tasks/store', [\App\Http\Controllers\API\TaskController::class, 'store'])->name('tasks.api.store');
+});
+
